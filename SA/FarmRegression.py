@@ -18,6 +18,7 @@ metadata.index = ['farm_%i' % i for i in range(len(metadata))]
 bacteria_counts_lognorm = pd.read_csv('Sustainable Agriculture/bacteria_counts_lognorm.csv', index_col=0)
 bacteria_counts = pd.read_table('Sustainable Agriculture/bacteria_counts.tsv')
 
+bacteria_counts = bacteria_counts.drop(['Unnamed: 0'], axis=1)
 #@title ###Setup notebook.
 #@title ###Setup notebook.
 
@@ -58,16 +59,16 @@ st.title('AI Model for Sustainable Agriculture')
 
 # Later: add more Streamlit code here
 st.header("Locate Fertile Soil and Predicting Crop Yield ")
-st.subheader("William Lu 2024, Material Provided by Inspirit AI ")
+st.subheader("By William Lu, Material Provided by Inspirit AI ")
 st.image('SA/IndianFarm.png')
-st.write("One way we can improve both people and planet health is through better farming practices. More efficient and effective farming practices can have greater crop yields while using less land, energy, and harmful chemicals. The world is projected to have 9 billion people by 2050... How can we make sure we are able to nourish 9 billion people while also nourishing our planet?")
+st.write("As global temperatures rise and weather patterns shift, the amount of fertile land is diminishing. Meanwhile, the world is projected to have 9 billion people by 2050. How can we make sure we are able to nourish 9 billion people while also nourishing our planet? Managing and developing agricultural lands can help use reach greater crop yields while using less land, energy, and harmful chemicals.")
 st.write("Scientists have discovered that the soil microbiome, the collection of bacteria that live in a region of soil play an important role in the health of plants! Therefore, maybe we can predict how well plants will grow in a region based on the bacterial composition of the soil.")
-
 
 
 st.subheader("DataSet")
 st.dataframe(metadata)
-st.dataframe(bacteria_counts)
+st.dataframe(bacteria_counts_lognorm)
+st.write("Table: Bacteria Counts Log Transformed")
 st.write("Through data collected on farms and their bacterial composition, we can train machine learning models to accurately predict crop yields. This can help farmers and institutions discover fertile soil, better managing resources and make more informed decisions.")
 
 
