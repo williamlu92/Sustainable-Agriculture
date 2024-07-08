@@ -92,5 +92,5 @@ X_sample = X_sample.to_frame().transpose()
 st.dataframe(X_sample)
 
 y_sample = model.predict(X_sample)
-st.write(f"This farm is expected to produce a yield of {y_sample[0]} tons of Barley/hectare")
-st.write(f"农场预计产出大麦 {y_sample[0]} 吨/公顷")
+st.write(f"This field can produce a yield of {y_sample[0] * 1000} kilograms/hectare")
+st.write(f"农场预计产出大麦 {y_sample[0] * 2000} 斤/公顷")
