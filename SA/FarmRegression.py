@@ -16,7 +16,7 @@ metadata = pd.read_table('Sustainable Agriculture/sample_metadata.tsv')
 metadata.index = ['farm_%i' % i for i in range(len(metadata))]
 
 bacteria_counts_lognorm = pd.read_csv('Sustainable Agriculture/bacteria_counts_lognorm.csv', index_col=0)
-bacteria_counts = pd.read_csv('Sustainable Agriculture/bacteria_counts.tsv')
+bacteria_counts = pd.read_table('Sustainable Agriculture/bacteria_counts.tsv')
 
 #@title ###Setup notebook.
 #@title ###Setup notebook.
@@ -84,7 +84,7 @@ st.subheader("Select a Farm and its sampled bacteria profile below")
 
 b = st.slider('Slide me', min_value=0, max_value=50)
 
-X_sample = bacteria_counts.iloc[b]
+X_sample = bacteria_counts_lognorm.iloc[b]
 
 # If you want to convert it into a DataFrame, you can use .to_frame() or .transpose() methods
 X_sample = X_sample.to_frame().transpose()
