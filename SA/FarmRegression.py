@@ -59,7 +59,7 @@ st.title('AI Model for Sustainable Agriculture')
 # Later: add more Streamlit code here
 st.header("Locate Fertile Soil and Predicting Crop Yield ")
 st.subheader("William Lu 2024, Material Provided by Inspirit AI ")
-
+st.image('SA/Plant.png')
 st.write("One way we can improve both people and planet health is through better farming practices. More efficient and effective farming practices can have greater crop yields while using less land, energy, and harmful chemicals. The world is projected to have 9 billion people by 2050... How can we make sure we are able to nourish 9 billion people while also nourishing our planet?")
 st.write("Scientists have discovered that the soil microbiome, the collection of bacteria that live in a region of soil play an important role in the health of plants! Therefore, maybe we can predict how well plants will grow in a region based on the bacterial composition of the soil.")
 
@@ -67,24 +67,24 @@ st.write("Scientists have discovered that the soil microbiome, the collection of
 
 st.subheader("DataSet")
 st.dataframe(metadata)
-st.dataframe(bacteria_counts_lognorm)
+st.dataframe(bacteria_counts)
 st.write("Through data collected on farms and their bacterial composition, we can train machine learning models to accurately predict crop yields. This can help farmers and institutions discover fertile soil, better managing resources and make more informed decisions.")
 
 
 st.header("Machine Learning Models")
 st.subheader("Random Forest Model")
-
+st.image('SA/RandomForest.png')
 st.write("A Random forest regression model combines multiple decision trees to create a single model. Each tree in the forest builds from a different subset of the data and makes its own independent prediction. The final prediction for input is based on the average or weighted average of all the individual trees' predictions.")
-
+st.image('SA/RandomForestTrained.png')
 
 
 
 st.header("Demonstration")
 st.subheader("Select a Farm and its sampled bacteria profile below")
 
-b = st.slider('Slide me', min_value=0, max_value=15)
+b = st.slider('Slide me', min_value=0, max_value=50)
 
-X_sample = bacteria_counts_lognorm.iloc[b]
+X_sample = bacteria_counts.iloc[b]
 
 # If you want to convert it into a DataFrame, you can use .to_frame() or .transpose() methods
 X_sample = X_sample.to_frame().transpose()
