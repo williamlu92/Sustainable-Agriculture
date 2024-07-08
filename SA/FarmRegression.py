@@ -59,7 +59,7 @@ st.title('AI Model for Sustainable Agriculture')
 # Later: add more Streamlit code here
 st.header("Locate Fertile Soil and Predicting Crop Yield ")
 st.subheader("William Lu 2024, Material Provided by Inspirit AI ")
-st.image('SA/Plant.png')
+st.image('SA/IndianFarm.png')
 st.write("One way we can improve both people and planet health is through better farming practices. More efficient and effective farming practices can have greater crop yields while using less land, energy, and harmful chemicals. The world is projected to have 9 billion people by 2050... How can we make sure we are able to nourish 9 billion people while also nourishing our planet?")
 st.write("Scientists have discovered that the soil microbiome, the collection of bacteria that live in a region of soil play an important role in the health of plants! Therefore, maybe we can predict how well plants will grow in a region based on the bacterial composition of the soil.")
 
