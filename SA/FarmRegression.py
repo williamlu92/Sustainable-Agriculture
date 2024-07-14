@@ -60,7 +60,7 @@ st.write("Scientists have discovered that the soil microbiome, the collection of
 st.subheader("DataSet")
 st.dataframe(metadata.head(5))
 st.write("Farm Crop-Yield Dataset from Australia")
-st.dataframe(bacteria_counts_lognorm.columns[20::20].head())
+st.dataframe(bacteria_counts_lognorm.head())
 st.write("Table: Bacteria Counts Log Transformed")
 st.write("Through data collected on farms and their bacterial composition, we can train machine learning models to accurately predict crop yields. This can help farmers and institutions discover fertile soil, better managing resources and make more informed decisions.")
 
