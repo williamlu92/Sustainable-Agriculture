@@ -19,7 +19,7 @@ metadata = pd.read_table('Sustainable Agriculture/sample_metadata.tsv')
 metadata.index = ['farm_%i' % i for i in range(len(metadata))]
 metadata['crop_yield'] += 1
 
-sequences_counts = pd.read_table('16S_counts.tsv')
+sequences_counts = pd.read_table('SA/16S_counts.tsv')
 sequences_counts.index = ['farm_%i' % i for i in range(len(sequences_counts))]
 
 bacteria_counts_lognorm = pd.read_csv('Sustainable Agriculture/bacteria_counts_lognorm.csv', index_col=0)
@@ -28,7 +28,7 @@ bacteria_counts = pd.read_table('Sustainable Agriculture/bacteria_counts.tsv')
 bacteria_counts = bacteria_counts.drop(['Unnamed: 0'], axis=1)
 #@title ###Setup notebook.
 #@title ###Setup notebook.
-sequence_to_species_dict = np.load('sequence_to_species_dict.npy', allow_pickle=True).item()
+sequence_to_species_dict = np.load('SA/sequence_to_species_dict.npy', allow_pickle=True).item()
 
 
 import pandas as pd
