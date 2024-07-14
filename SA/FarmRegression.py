@@ -53,10 +53,6 @@ Rpreds = Rmodel.predict(X_test)
 
 
 #MLP Regressor Model
-MLPmodel = MLPRegressor()
-MLPmodel.fit(X_train, y_train)
-MLPpreds = MLPmodel.predict(X_test)
-
 
 st.title('AI Model for Sustainable Agriculture: Locate Fertile Soil to Secure Food Supply') 
 st.write("By William Lu, Material Provided by Inspirit AI ")
@@ -105,7 +101,7 @@ X_sample = X_sample.to_frame().transpose()
 st.dataframe(X_sample)
 
 y_sample = Rmodel.predict(X_sample)
-y_sample_MLP = MLPmodel.predict(X_sample)
+
 
 st.write(f"This field can produce a yield of {y_sample[0] * 1000} kilograms/hectare")
 st.write(f"农场预计产出大麦 {y_sample[0] * 2000} 斤/公顷")
