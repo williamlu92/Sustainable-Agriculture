@@ -19,17 +19,12 @@ metadata = pd.read_table('Sustainable Agriculture/sample_metadata.tsv')
 metadata.index = ['farm_%i' % i for i in range(len(metadata))]
 metadata['crop_yield'] += 1
 
-sequences_counts = pd.read_table('SA/16S_counts.tsv')
-sequences_counts.index = ['farm_%i' % i for i in range(len(sequences_counts))]
-
 bacteria_counts_lognorm = pd.read_csv('Sustainable Agriculture/bacteria_counts_lognorm.csv', index_col=0)
 bacteria_counts = pd.read_table('Sustainable Agriculture/bacteria_counts.tsv')
 
 bacteria_counts = bacteria_counts.drop(['Unnamed: 0'], axis=1)
 #@title ###Setup notebook.
 #@title ###Setup notebook.
-sequence_to_species_dict = np.load('SA/sequence_to_species_dict.npy', allow_pickle=True).item()
-
 
 import pandas as pd
 import numpy as np
@@ -114,18 +109,6 @@ y_sample_MLP = MLPmodel.predict(X_sample)
 
 st.write(f"This field can produce a yield of {y_sample[0] * 1000} kilograms/hectare")
 st.write(f"农场预计产出大麦 {y_sample[0] * 2000} 斤/公顷")
-
-st.header("Input your own Farm 16S Barcode Sample")
-st.write("You may ask: How did we get the measurements of our different bacteria in the first place? Nowadays, measuring the amounts of different species of bacteria in a sample is done through a type of DNA sequencing called 16S sequencing. Bacteria have a very special region in their DNA called the 16S region. Every species of bacteria has a different DNA sequence in their 16S region. To measure the amount of bacteria in a sample, the machine reads the 16S sequence of all bacteria cells in a sample. Then the computer looks up what species of bacteria, each 16S sequence/barcode belongs to, and tallies up the total number of each bacteria.")
-st.subheader("Example 16S barcodes from our sample soil (8844 Columns)")
-st.dataframe(sequences_counts.columns[20::20].head(5))
-
-sequences_counts_t = sequences_counts.transpose()
-sequences_counts_t['species'] = [sequence_to_species_dict[i] for i in sequences_counts_t.index]
-summed_data = sequences_counts_t.groupby('species').sum()
-new_counts = summed_data.transpose()
-st.subheader("Barcodes Input Transformed into Bacteria Counts (650 Columns)")
-st.dataframe(new_counts.columns[20::20].head(5))
 
 
 
