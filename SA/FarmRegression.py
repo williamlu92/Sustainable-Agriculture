@@ -78,7 +78,7 @@ with col2:
     st.write("An MLP (Multilayer Perceptron) regressor is a type of artificial neural network used for predicting continuous values. It consists of layers of interconnected nodes, or neurons, where each layer processes the input data and passes it to the next layer. The network learns to make accurate predictions by adjusting the connections (weights) between neurons based on the error of its predictions during training. By using multiple layers and nonlinear activation functions, an MLP can model complex relationships in the data, making it useful for tasks like predicting housing prices or crop yields.")
 st.image("SA/Performance.png")
 
-col3, col4, col5= st.columns(2)
+col3, col4, col5= st.columns(3)
 
 with col3: 
     st.image("SA/Graph")
