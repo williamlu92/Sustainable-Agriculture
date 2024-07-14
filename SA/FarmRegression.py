@@ -81,11 +81,11 @@ st.image("SA/Performance.png")
 col3, col4, col5= st.columns(3)
 
 with col3: 
-    st.image("SA/Graph")
+    st.image("SA/Graph.png")
 with col4:
-    st.image("SA/Graph2")
+    st.image("SA/Graph2.png")
 with col5:
-    st.image("SA/Histogram")
+    st.image("SA/Histogram.png")
 
 st.header("Model Demo")
 st.subheader("Select a Farm and its sampled bacteria profile below")
