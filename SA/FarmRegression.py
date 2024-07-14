@@ -13,7 +13,7 @@ from sklearn.model_selection import GridSearchCV
 
 metadata = pd.read_table('Sustainable Agriculture/sample_metadata.tsv')
 metadata.index = ['farm_%i' % i for i in range(len(metadata))]
-metadata['crop_yield'] += 1
+metadata['crop_yield'] += 1.5
 
 bacteria_counts_lognorm = pd.read_csv('Sustainable Agriculture/bacteria_counts_lognorm.csv', index_col=0)
 bacteria_counts = pd.read_table('Sustainable Agriculture/bacteria_counts.tsv')
