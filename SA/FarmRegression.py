@@ -50,8 +50,8 @@ Rpreds = Rmodel.predict(X_test)
 
 #MLP Regressor Model
 
-st.title('AI Model for Sustainable Agriculture: Locate Fertile Soil to Secure Food Supply') 
-st.write("By William Lu, Material Provided by Inspirit AI ")
+st.title('AI Model for Sustainable Agriculture: Predicting Crop Yields from Soil Sample') 
+st.write("William Lu + Inspirit AI Materials 2024")
 st.image('SA/IndianFarm.png')
 st.write("As global temperatures rise and weather patterns shift, the amount of fertile land is diminishing. Meanwhile, the world is projected to have 9 billion people by 2050. How can we make sure we are able to nourish 9 billion people while also nourishing our planet? Managing and developing agricultural lands can help use reach greater crop yields while using less land, energy, and harmful chemicals.")
 st.write("Scientists have discovered that the soil microbiome, the collection of bacteria that live in a region of soil play an important role in the health of plants! Therefore, maybe we can predict how well plants will grow in a region based on the bacterial composition of the soil.")
@@ -76,17 +76,23 @@ with col2:
     st.subheader("Multilayer Perceptron Neural Network")
     st.image('SA/MLP.png')
     st.write("An MLP (Multilayer Perceptron) regressor is a type of artificial neural network used for predicting continuous values. It consists of layers of interconnected nodes, or neurons, where each layer processes the input data and passes it to the next layer. The network learns to make accurate predictions by adjusting the connections (weights) between neurons based on the error of its predictions during training. By using multiple layers and nonlinear activation functions, an MLP can model complex relationships in the data, making it useful for tasks like predicting housing prices or crop yields.")
+st.subheader("Model Performance")
 st.image("SA/Performance.png")
 
 col3, col4, col5= st.columns(3)
 
 with col3: 
     st.image("SA/Graph.png")
+    st.write("Figure: Random Forest Regression Predicted vs Actual Yields with Testing Data")
 with col4:
     st.image("SA/Graph2.png")
+    st.write("Figure: MLP Neural Network Predicted vs Actual Yields with Testing Data")
 with col5:
     st.image("SA/Histogram.png")
-
+    st.write("Figure: Distribution of Barley Yield in Dataset") 
+    
+st.write("Both models were able to account for around 80% of variation in soil crop yields of new unseen samples. This can be applied to analyze manage and develop more sustinable agricultural plans.")
+         
 st.header("Model Demo")
 st.subheader("Select a Farm and its sampled bacteria profile below")
 b = st.slider('Slide me', min_value=0, max_value=10)
