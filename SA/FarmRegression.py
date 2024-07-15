@@ -49,7 +49,7 @@ Rpreds = Rmodel.predict(X_test)
 
 
 st.title('Machine Learning for Sustainable Agriculture: Predicting Crop Yields from Soil Sample') 
-st.write("William Lu + Inspirit AI Materials 2024")
+st.write("William Lu + Inspirit AI 2024")
 st.image('SA/IndianFarm.png')
 st.write("As global temperatures rise and weather patterns shift, the amount of fertile land is diminishing. Meanwhile, the world is projected to have 9 billion people by 2050. How can we make sure we are able to nourish 9 billion people while also nourishing our planet? Managing and developing agricultural lands can help use reach greater crop yields while using less land, energy, and harmful chemicals.")
 st.write("Scientists have discovered that the soil microbiome, the collection of bacteria that live in a region of soil play an important role in the health of plants! Therefore, maybe we can predict how well plants will grow in a region based on the bacterial composition of the soil.")
@@ -91,7 +91,7 @@ with col5:
     
 st.write("Both models were able to account for around 80% of variation in soil crop yields of new unseen samples. This can be applied to analyze manage and develop more sustinable agricultural plans.")
          
-st.header("Model Demo")
+st.header("Model Demonstration")
 st.subheader("Select a Farm and its sampled bacteria profile below")
 b = st.slider('Slide me', min_value=0, max_value=10)
 X_sample = bacteria_counts_lognorm.iloc[b]
@@ -107,4 +107,4 @@ st.write(f"This field can produce a yield of {y_sample[0] * 1000} kilograms/hect
 st.write(f"农场预计产出大麦 {y_sample[0] * 2000} 斤/公顷")
 
 
-
+st.button("Download Models")
