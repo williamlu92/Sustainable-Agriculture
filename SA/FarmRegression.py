@@ -104,7 +104,7 @@ y_sample = Rmodel.predict(X_sample)
 
 
 st.write(f"This field can produce a yield of {y_sample[0] * 1000} kilograms/hectare")
-st.write(f"农场预计产出大麦 {y_sample[0] * 2000} 斤/公顷")
+
 
 
 st.button("Download Models")
