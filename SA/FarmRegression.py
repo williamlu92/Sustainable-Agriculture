@@ -48,9 +48,7 @@ Rmodel.fit(X_train, y_train)
 Rpreds = Rmodel.predict(X_test)
 
 
-#MLP Regressor Model
-
-st.title('AI Model for Sustainable Agriculture: Predicting Crop Yields from Soil Sample') 
+st.title('Machine Learning for Sustainable Agriculture: Predicting Crop Yields from Soil Sample') 
 st.write("William Lu + Inspirit AI Materials 2024")
 st.image('SA/IndianFarm.png')
 st.write("As global temperatures rise and weather patterns shift, the amount of fertile land is diminishing. Meanwhile, the world is projected to have 9 billion people by 2050. How can we make sure we are able to nourish 9 billion people while also nourishing our planet? Managing and developing agricultural lands can help use reach greater crop yields while using less land, energy, and harmful chemicals.")
@@ -65,7 +63,7 @@ st.write("Table: Bacteria Counts Log Transformed")
 st.write("Through data collected on farms and their bacterial composition, we can train machine learning models to accurately predict crop yields. This can help farmers and institutions discover fertile soil, better managing resources and make more informed decisions.")
 
 
-st.header("Machine Learning Models")
+st.header("Random Forest + Neural Network")
 col1, col2 = st.columns(2)
 with col1: 
     st.subheader("Random Forest Model")
