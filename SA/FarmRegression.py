@@ -49,7 +49,7 @@ Rpreds = Rmodel.predict(X_test)
 
 
 st.title('Machine Learning for Sustainable Agriculture: Predicting Crop Yields from Soil Sample') 
-st.write("William Lu")
+st.write("Developed by William Lu 2024")
 st.image('SA/IndianFarm.png')
 st.write("As global temperatures rise and weather patterns shift, the amount of fertile land is diminishing. Meanwhile, the world is projected to have 9 billion people by 2050. How can we make sure we are able to nourish 9 billion people while also nourishing our planet? Managing and developing agricultural lands can help use reach greater crop yields while using less land, energy, and harmful chemicals.")
 st.write("Scientists have discovered that the soil microbiome, the collection of bacteria that live in a region of soil play an important role in the health of plants! Therefore, maybe we can predict how well plants will grow in a region based on the bacterial composition of the soil.")
